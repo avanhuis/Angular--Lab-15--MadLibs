@@ -1,9 +1,7 @@
 var app = angular.module('myModule');
 
-app.factory('getMadLib', function(){
-	
-
-	return {
-
-	}
-})
+app.controller('getMadLib', function($scope, creatingMadLib){
+	$scope.save = function(){
+		creatingMadLib.saveName($scope.pluralnoun);
+	};
+});

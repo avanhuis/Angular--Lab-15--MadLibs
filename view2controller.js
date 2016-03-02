@@ -1,9 +1,6 @@
 var app = angular.module('myModule');
 
-app.factory('returnMadLib', function(){
-
-
-	return {
-
-	}
-})
+app.controller('showResults', function($scope, creatingMadLib){
+		$scope.pluralnoun = creatingMadLib.outputName();
+		console.log(creatingMadLib.outputName());
+});
